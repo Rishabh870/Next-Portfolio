@@ -1,0 +1,233 @@
+:root {
+  /* --maincolor: #3fe5ff; */
+  --maincolor: #ff0000;
+  /* --maincolor: #ff7b00; */
+  --gradiant-second: #be4600;
+  --gradiant-first: #7f0c00;
+  --gradiant-third: var(--maincolor);
+}
+
+.css-selector {
+  background: var(--maincolor);
+}
+
+.custom-bg-color {
+  background-color: var(--maincolor);
+}
+
+.custom-color {
+  color: var(--maincolor);
+  font-variant-caps: small-caps;
+}
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+  width: 0.4rem; /* Width of the scrollbar */
+  background-color: rgb(65, 65, 65);
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: var(
+    --maincolor
+  ); /* Set the background color using the main color variable */
+  border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+}
+
+/* Optionally, you can also style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Transparent background for the scrollbar track */
+}
+
+.sections {
+  max-width: 70rem;
+}
+
+.card {
+  /* Other styles */
+  background: rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+
+/* Home.jsx */
+
+.detail {
+  @media (min-width: 1200px) {
+    width: 30rem;
+  }
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.6rem;
+
+  @media (min-width: 1550px) {
+    font-size: 1.8rem;
+  }
+}
+
+.subTitle {
+  font-variant: small-caps;
+  font-size: 1.4rem;
+
+  color: var(--maincolor);
+  @media (max-width: 375px) {
+    font-size: 1.3rem;
+  }
+}
+
+.about {
+  font-size: 0.9rem;
+  color: rgb(192, 192, 192);
+  font-style: italic;
+}
+
+.bg-btn {
+  color: white;
+  background: var(--maincolor);
+}
+.bg-btn:hover {
+  color: white;
+
+  background: var(--maincolor);
+}
+
+.border-btn {
+  color: var(--maincolor);
+  border: 0.15rem solid var(--maincolor);
+}
+.border-btn:hover {
+  color: var(--maincolor);
+  border: 0.15rem solid var(--maincolor);
+}
+
+/* About.jsx */
+.custom-top {
+  top: 6.9rem;
+}
+
+.custom-bottom {
+  bottom: 6.9rem;
+}
+
+/* navigation */
+
+.menu {
+  background-color: rgba(231, 231, 231, 0.1);
+  /* From https://css.glass */
+  /* background: rgba(255, 255, 255, 0.24); */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(255, 255, 255, 0.27);
+}
+
+.nav-btn {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.nav-btn :hover {
+  color: var(--maincolor);
+}
+
+.nav-btn-active {
+  background: var(--maincolor);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 99px;
+}
+
+.nav-btn-active:hover {
+  color: white;
+}
+
+/* contact */
+
+.header {
+  font-size: xx-large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.let-work {
+  font-size: large;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: var(--maincolor);
+}
+
+.form-input {
+  outline: none;
+  border-bottom: 0.15rem solid var(--maincolor);
+  max-width: 35rem;
+}
+
+.form-submit {
+  outline: none;
+  border: 0.125rem solid var(--maincolor);
+}
+
+/* work */
+
+.work-title {
+  font-weight: bold;
+  color: var(--maincolor);
+  margin-bottom: 1rem;
+  font-size: large;
+  font-variant: small-caps;
+}
+
+.work-desc {
+  font-size: small;
+  color: rgb(196, 196, 196);
+}
+
+.project-work-btn {
+  color: var(--maincolor);
+  border: 0.15rem solid var(--maincolor);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  background-repeat: no-repeat;
+  height: 23rem;
+  background-color: var(--maincolor);
+  width: 23rem;
+  box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
+  animation: animate 5s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; /* Initial border-radius */
+  }
+  25% {
+    border-radius: 40% 60% 50% 50%/50% 40% 60% 50%; /* Adjusted border-radius */
+  }
+  50% {
+    border-radius: 30% 70% 60% 40%/50% 60% 40% 50%; /* Adjusted border-radius */
+  }
+  75% {
+    border-radius: 50% 55% 60% 40%/60% 50% 50% 60%; /* Adjusted border-radius */
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; /* Back to initial border-radius */
+  }
+}
