@@ -2,13 +2,9 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import "./index.css";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import LeetCodeIcon from "@mui/icons-material/Code";
 import { fadeIn } from "../../animation";
 import { motion } from "framer-motion";
 import Me from "../Images/Profile.jpg";
-import Image from "next/image";
 
 const HomePage = ({ scrollToContact, scrollToProject }) => {
   return (

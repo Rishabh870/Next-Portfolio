@@ -5,7 +5,6 @@ import CardItem from "./CardItems";
 import Discord from "../Images/Discord.png";
 import NexusCart from "../Images/NexusCart.png"; // Import image2
 import PulseTweet from "../Images/PulseTweet.png"; // Import image2
-import Reactogram from "../Images/Reactogram.png"; // Import image2
 import { fadeIn } from "../../animation";
 import { motion } from "framer-motion";
 const Card = () => {

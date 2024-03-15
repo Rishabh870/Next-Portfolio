@@ -1,5 +1,4 @@
 import Card from "@/components/Card";
-import ProjectShapeGenerater from "@/components/ProjectShapeGenerater";
 
 const Projects = () => {
   return (

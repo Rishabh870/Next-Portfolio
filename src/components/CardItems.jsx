@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { FaChevronRight } from "react-icons/fa";
 
-const CardItem = ({ image, header, description, points, btnText, btnLink }) => {
+const CardItem = ({ image, header, description, points, btnLink }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

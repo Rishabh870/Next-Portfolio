@@ -1,4 +1,3 @@
-import IndexPage from "@/components/Indexpage";
 import Timeline from "@/components/Timeline";
 import React from "react";
 

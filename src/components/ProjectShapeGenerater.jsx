@@ -1,8 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import "./Projects.css";
-import Image from "next/image";
-import Img from "../Images/icon.png";
 
 const ProjectShapeGenerater = () => {
   const [previousIndexes, setPreviousIndexes] = useState([]);
