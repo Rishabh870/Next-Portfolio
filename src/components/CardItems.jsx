@@ -24,8 +24,10 @@ const CardItem = ({ image, header, description, points, btnLink }) => {
         {/* Background image */}
         <Image
           className="object-cover w-full h-64 md:h-72 lg:h-80"
-          src={image.src}
-          alt="Card background"
+          src={image}
+          width={500}
+          height={100}
+          alt={header}
         />
 
         {/* Glass-like effect on hover */}

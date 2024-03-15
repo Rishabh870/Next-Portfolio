@@ -2,15 +2,13 @@
 
 import React from "react";
 import CardItem from "./CardItems";
-import Discord from "../Images/Discord.png";
-import NexusCart from "../Images/NexusCart.png"; // Import image2
-import PulseTweet from "../Images/PulseTweet.png"; // Import image2
 import { fadeIn } from "../../animation";
 import { motion } from "framer-motion";
 const Card = () => {
   const cardData = [
     {
-      image: Discord,
+      image:
+        "https://res.cloudinary.com/dsefier2u/image/upload/v1710501731/portfolio/Images/DIscord_w3sk2z.png",
       header: "Discorded",
       description: " Shadcn, Prisma , Clerk, UploadThing, Socket.io",
       points: [
@@ -22,7 +20,8 @@ const Card = () => {
       btnLink: "https://discord-clone-production-ad73.up.railway.app/",
     },
     {
-      image: NexusCart, // Use imported image2
+      image:
+        "https://res.cloudinary.com/dsefier2u/image/upload/v1710501729/portfolio/Images/NexusCart_cgusab.png", // Use imported image2
       header: "Nexus Cart",
       description: "JavaScript, Bootstrap, React, MongoDb, Node",
       points: [
@@ -34,7 +33,8 @@ const Card = () => {
       btnLink: "https://nexus-cart.netlify.app/",
     },
     {
-      image: PulseTweet, // Use imported image2
+      image:
+        "https://res.cloudinary.com/dsefier2u/image/upload/v1710501727/portfolio/Images/PulseTweet_jnu0on.png", // Use imported image2
       header: "Pulse Tweet",
       description: " Rest API, JavaScript, Bootstrap, React, Git ",
       points: [

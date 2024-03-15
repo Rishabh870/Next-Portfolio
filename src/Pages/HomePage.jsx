@@ -4,7 +4,6 @@ import Typewriter from "typewriter-effect";
 import "./index.css";
 import { fadeIn } from "../../animation";
 import { motion } from "framer-motion";
-import Me from "../Images/Profile.jpg";
 
 const HomePage = ({ scrollToContact, scrollToProject }) => {
   return (
@@ -121,7 +120,7 @@ const HomePage = ({ scrollToContact, scrollToProject }) => {
               <div
                 className="box"
                 style={{
-                  background: `url(${Me.src})`,
+                  background: `url(https://res.cloudinary.com/dsefier2u/image/upload/v1710501738/portfolio/Images/Profile_nzgkqj.jpg)`,
                   backgroundSize: "cover",
                   backgroundPosition: "center center",
                 }}
