@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { FaChevronRight } from "react-icons/fa";
+import Image from "next/image";
 
 const CardItem = ({ image, header, description, points, btnLink }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -21,7 +22,7 @@ const CardItem = ({ image, header, description, points, btnLink }) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Background image */}
-        <img
+        <Image
           className="object-cover w-full h-64 md:h-72 lg:h-80"
           src={image.src}
           alt="Card background"

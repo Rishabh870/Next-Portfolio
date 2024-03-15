@@ -1,4 +1,5 @@
 // components/AutoScroller.js
+import Image from "next/image";
 import React, { useRef, useEffect } from "react";
 
 const AutoScroller = ({ images, scrollSpeed }) => {
@@ -43,7 +44,7 @@ const AutoScroller = ({ images, scrollSpeed }) => {
     >
       {duplicatedImages.map((image, index) => (
         <div className="h-20 w-20  inline-block mr-4" key={index}>
-          <img src={image} alt={`Image ${index}`} className="" />
+          <Image src={image} alt={`Image ${index}`} className="" />
         </div>
       ))}
     </div>
