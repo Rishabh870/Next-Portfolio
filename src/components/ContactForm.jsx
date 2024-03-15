@@ -23,7 +23,6 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      console.log(formData);
       // Make the API call to send the formData
       const response = await fetch("/api/sendEmail", {
         // Adjust the endpoint path if needed
@@ -38,9 +37,9 @@ const ContactForm = () => {
         throw new Error("Failed to send email");
       }
 
-      // Extract the response data if needed
-      const data = await response.json();
-      console.log(data);
+      formData.name = "";
+      formData.email = "";
+      formData.content = "";
     } catch (error) {
       console.error(error);
       // Handle error state
