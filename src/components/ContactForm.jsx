@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "../Pages/index.css";
 import { fadeIn } from "../../animation";
 import { motion } from "framer-motion";
-import axios from "axios";
+import nodemailer from "nodemailer";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -24,11 +24,32 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      // Make the API call to send the formData
-      const response = await axios.post("/api/sendEmail", {
-        formData,
-      });
-      console.log(response);
+      try {
+        const transporter = nodemailer.createTransport({
+          service: "gmail",
+          auth: {
+            user: "testworking760@gmail.com",
+            pass: "kmnmhwjcarusalyk",
+          },
+        });
+
+        const formData = req.body;
+        console.log(formData);
+        const mailOption = {
+          from: "moses87@ethereal.email",
+          to: "choudharyrishabh870@gmail.com",
+          subject: "Email Verification Code",
+          text: `name:${formData.name}\nemail:${formData.email}\ncontent:${formData.content}`,
+        };
+
+        const info = await transporter.sendMail(mailOption);
+
+        console.log("Email sent: " + info.response);
+        res.status(200).json({ message: "Email sent" });
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal server error" });
+      }
 
       formData.name = "";
       formData.email = "";
