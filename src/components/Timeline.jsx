@@ -29,8 +29,8 @@ const items = [
 
 const Timeline = () => {
   return (
-    <div className="px-5 h-fit relative flex justify-evenly  items-center ">
-      <div className="w-11/12 h-1 absolute bg-white"></div>
+    <div className="px-5 gap-x-2 md:gap-x-0 h-full py-10 md:h-fit w-full relative flex flex-col justify-center md:flex-row md:justify-evenly md:items-center ">
+      <div className="w-11/12 h-1 absolute bg-white hidden sm:block "></div>
       {items?.map((item, index) => (
         <TimelineItem
           key={index}

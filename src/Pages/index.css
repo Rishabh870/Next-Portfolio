@@ -207,9 +207,7 @@
 
 .box {
   background-repeat: no-repeat;
-  height: 23rem;
   background-color: var(--maincolor);
-  width: 23rem;
   box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
   animation: animate 5s ease-in-out infinite;
 }

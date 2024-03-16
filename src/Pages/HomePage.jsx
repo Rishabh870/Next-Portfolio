@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const HomePage = ({ scrollToContact, scrollToProject }) => {
   return (
     <div className="h-screen w-screen " id="home">
-      <div className="flex h-screen justify-center  mx-auto sections lg:px-24">
+      <div className="flex flex-col md:flex-row h-screen justify-center  mx-auto sections lg:px-24">
         <div className="h-full w-full sm:h-full flex flex-col justify-center">
           <div className="w-fit detail mx-auto px-8 sm:pr-3 lg:px-5 pt-4 ">
             <div className="">
@@ -109,26 +109,23 @@ const HomePage = ({ scrollToContact, scrollToProject }) => {
             </motion.div>
           </div>
         </div>
-        <div className="h-screen w-full sm:h-screen hidden md:flex justify-center items-center">
+        <div className="h-full w-full md:h-screen md:flex justify-center items-center">
           <motion.div
             variants={fadeIn("left", 0.5)}
             initial="hidden"
             whileInView="show"
-            className="w-full md:p-4 relative mx-auto flex justify-center items-center"
+            className="w-full h-full p-10 pt-0 md:p-4 relative mx-auto flex justify-center items-center"
           >
-            <div className="wrapper relative">
+            <div className="wrapper h-full w-full relative">
               <div
-                className="box"
+                className="box h-[22rem] w-[22rem] md:h-[24rem] md:w-[24rem]"
                 style={{
                   background: `url(https://res.cloudinary.com/dsefier2u/image/upload/v1710501738/portfolio/Images/Profile_nzgkqj.jpg)`,
                   backgroundSize: "cover",
                   backgroundPosition: "center center",
                 }}
               ></div>
-              <div
-                style={{ height: "24rem", width: "23.5rem" }}
-                className=" absolute box -z-10"
-              ></div>
+              <div className=" absolute h-[23rem] w-[22.5rem] md:h-[25rem] md:w-[24.5rem]  box -z-10"></div>
             </div>
           </motion.div>
         </div>

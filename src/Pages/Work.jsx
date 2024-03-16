@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { fadeIn } from "../../animation";
 import { motion } from "framer-motion";
 
@@ -20,6 +20,7 @@ const services = [
   },
 ];
 const Work = ({ scrollToProject }) => {
+  const [clickedIndex, setClickedIndex] = useState(null);
   return (
     <div className="h-screen w-screen overflow-hidden" name="work">
       <div className="flex flex-col sm:flex-row h-screen justify-center mx-auto sections lg:px-24 ">
@@ -54,16 +55,30 @@ const Work = ({ scrollToProject }) => {
           <div className="w-full md:p-1 sm:relative py-8 mx-auto">
             {services.map((service, index) => {
               const { name, description, links } = service;
+              const toggleDescription = (index) => {
+                setClickedIndex(clickedIndex === index ? null : index); // Toggle clickedIndex state
+              };
               return (
                 <motion.div
                   variants={fadeIn("left", `${0.5 + index / 5}`)}
                   initial="hidden"
                   whileInView="show"
                   key={index}
-                  className="border-b-2 pb-3 mb-3 border-white "
+                  className=" border-b-2 pb-3 mb-3 border-white "
                 >
-                  <p className="work-title">{name}</p>
-                  <p className="work-desc">{description}</p>
+                  <p
+                    className="work-title"
+                    onClick={() => toggleDescription(index)}
+                  >
+                    {name}
+                  </p>
+                  {clickedIndex === index && (
+                    <p className="work-desc md:hidden">{description}</p>
+                  )}
+
+                  <p className="work-desc hidden md:block">{description}</p>
+
+                  {/* Show description only if showDescription state is true */}
                 </motion.div>
               );
             })}

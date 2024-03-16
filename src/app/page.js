@@ -75,7 +75,7 @@ export default function Home() {
       <div ref={contactRef}>
         <Contact />
       </div>
-      <div className="fixed -bottom-6 sm:bottom-7 w-screen">
+      <div className="fixed bottom-7 w-screen">
         <Navigation
           scrollToHome={() => scrollToRef(homeRef)}
           scrollToAbout={() => scrollToRef(aboutRef)}

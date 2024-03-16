@@ -15,7 +15,7 @@ function Navigation({
   activeTab, // Assume activeTab is passed to determine which page is currently active
 }) {
   return (
-    <div className="flex justify-evenly items-center custom-color lg:w-1/2 xl:w-1/3 sm:w-1/2 mx-auto max-[1400px]:h-14 h-16 rounded-full menu">
+    <div className="flex justify-evenly items-center custom-color lg:w-1/2 xl:w-1/3 sm:w-1/2 w-5/6 mx-auto max-[1400px]:h-14 h-16 rounded-full menu">
       <button
         className={`sm:h-full text-xl py-2 h-fit  ${
           activeTab === "home" ? "nav-btn-active" : "nav-btn"
