@@ -118,7 +118,7 @@ const HomePage = ({ scrollToContact, scrollToProject }) => {
           >
             <div className="wrapper h-full w-full relative">
               <div
-                className="box h-[22rem] w-[22rem] md:h-[24rem] md:w-[24rem]"
+                className="box h-full w-full md:h-[24rem] md:w-[24rem]"
                 style={{
                   background: `url(https://res.cloudinary.com/dsefier2u/image/upload/v1710501738/portfolio/Images/Profile_nzgkqj.jpg)`,
                   backgroundSize: "cover",

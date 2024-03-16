@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../Pages/index.css";
 import { fadeIn } from "../../animation";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -24,25 +25,16 @@ const ContactForm = () => {
 
     try {
       // Make the API call to send the formData
-      const response = await fetch("/api/sendEmail", {
-        // Adjust the endpoint path if needed
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+      const response = await axios.post("/api/sendEmail", {
+        formData,
       });
-
-      if (!response.ok) {
-        throw new Error("Failed to send email");
-      }
+      console.log(response);
 
       formData.name = "";
       formData.email = "";
       formData.content = "";
     } catch (error) {
       console.error(error);
-      // Handle error state
     }
   };
 

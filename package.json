@@ -14,6 +14,7 @@
     "@mui/icons-material": "^5.15.10",
     "@mui/material": "^5.15.10",
     "@netlify/plugin-nextjs": "^4.41.3",
+    "axios": "^1.6.8",
     "framer-motion": "^11.0.8",
     "next": "13.5.4",
     "nodemailer": "^6.9.12",

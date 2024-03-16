@@ -34,7 +34,7 @@ const Card = () => {
     },
     {
       image:
-        "https://res.cloudinary.com/dsefier2u/image/upload/v1710501727/portfolio/Images/PulseTweet_jnu0on.png", // Use imported image2
+        "https://res.cloudinary.com/dsefier2u/image/upload/v1710594460/portfolio/Images/PulseTweet_lg3mmt.png", // Use imported image2
       header: "Pulse Tweet",
       description: " Rest API, JavaScript, Bootstrap, React, Git ",
       points: [
